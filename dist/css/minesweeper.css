@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: dimgray;
+}
+
+#game-over {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(100, 100, 100, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.dialog {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1fffff;
+	border-style: solid;
+	border-color: red;
+	border-width: 2px;
+	border-radius: 5px;
+	box-shadow: 2px 2px #000000;
+	
+}
+
+#game-title
+{
+    text-align: center;
+    display: block;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: black 2px solid;
+    background-color: yellow;
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+    position: fixed;
+    left: calc(10vw/2);
+    top: 20px;
+    width: 90vw;
+}
+
+#game {
+    flex-grow: 1;
+    padding: 1em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    max-height: 100vh;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#details {
+    padding-right: 1rem;
+    font-size: 2em;
+    font-family: monospace;
+}
+
+#details p {
+    margin: 0;
+}
+
+.mines-left {
+    padding-left: 1.5em;
+    background-image: url("../img/flag.svg");
+    background-repeat: no-repeat;
+}
+
+#board {
+    flex-grow: 0.3;
+    flex-basis: min-content;
+    max-width: calc(100vmin - 2rem);
+}
+
+#board .aspect {
+    position: relative;
+    overflow: visible;
+}
+
+#board .aspect::before {
+    display: block;
+    content: "";
+    height: 0;
+    padding-bottom: 100%;
+}
+
+#board .cells {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0.1em;
+    padding: 0.1em;
+    background-color: #000000;
+    min-width: min-content;
+    min-height: min-content;
+}
+
+.cell {
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 1em;
+    min-height: 1em;
+    padding: 10%;
+    background-color: #cccccc;
+    border-style: outset;
+}
+
+.cell.pushed {
+    border-style: inset;
+}
+
+.cell.revealed {
+    background-color: #eeeeee;
+    border-style: none;
+}
+
+.cell.flagged {
+    background-image: url("../img/flag.svg");
+}
+
+.cell.mined {
+    background-image: url("../img/mine.svg");
+}
+
+.cell.mined.revealed {
+    background-image: url("../img/mine-revealed.svg");
+}
+
+.cell.flagged.wrong {
+    background-image: url("../img/not-mine.svg");
+}
+
+.cell.revealed.m1 {
+    background-image: url("../img/1.svg");
+}
+
+.cell.revealed.m2 {
+    background-image: url("../img/2.svg");
+}
+
+.cell.revealed.m3 {
+    background-image: url("../img/3.svg");
+}
+
+.cell.revealed.m4 {
+    background-image: url("../img/4.svg");
+}
+
+.cell.revealed.m5 {
+    background-image: url("../img/5.svg");
+}
+
+.cell.revealed.m6 {
+    background-image: url("../img/6.svg");
+}
+
+.cell.revealed.m7 {
+    background-image: url("../img/7.svg");
+}
+
+.cell.revealed.m8 {
+    background-image: url("../img/8.svg");
+}
