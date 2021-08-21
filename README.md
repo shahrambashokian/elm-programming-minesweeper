@@ -1,3 +1,3 @@
 # elm-programming-minesweeper
 Implementing Minesweeper game with ELM functional programming language
-![](Screenshot.png | width=100)
+<img src="Screenshot.png" width="100" height="100">
